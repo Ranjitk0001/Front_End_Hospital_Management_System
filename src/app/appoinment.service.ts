@@ -14,4 +14,8 @@ export class AppoinmentService {
    getAllAppointments ():Observable<Appoinment[]>{
     return this.httpClient.get<Appoinment[]>(`${this.baseUrl}`)
    }
+
+   createAppointment(appoinment:Appoinment):Observable<Appoinment>{
+    return this.httpClient.post<Appoinment>(`${this.baseUrl}`,appoinment)
+   }
 }
