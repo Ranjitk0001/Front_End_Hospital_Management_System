@@ -50,6 +50,7 @@
         <th>Age</th>
         <th>Symtomps</th>
         <th>Number</th>
+        <th>Delete</th>
         
     </tr>
 </thead>
@@ -60,6 +61,9 @@
     <td>{{appointment.age}}</td>
     <td>{{appointment.symtomps}}</td>
     <td>{{appointment.number}}</td>
+    <td>
+      <button (click)="delete(appointment.id)" class="btn btn-danger">Delete</button>
+    </td>
     
 
 </tr>
