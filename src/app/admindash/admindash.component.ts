@@ -21,4 +21,11 @@ getPatients(){
    
   })
 }
+
+delete(id:number){
+  this.patientService.deletePatient(id).subscribe(data=>{
+   // console.log(data);
+   this.getPatients();
+  })
+ }
 }

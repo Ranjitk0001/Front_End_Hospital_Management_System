@@ -51,6 +51,7 @@
         <th>dose</th>
         <!-- <th>fees</th> -->
         <th>urgency</th>
+        <th>Delete</th>
     </tr>
 </thead>
 <tbody>
@@ -63,7 +64,9 @@
     <td>{{patient.dose}}</td>
     <!-- <td>{{patient.fees}}</td> -->
     <td>{{patient.urgency}}</td>
-
+    <td>
+      <button (click)="delete(patient.id)" class="btn btn-danger">Delete</button>
+    </td>
 </tr>
 
 </tbody>
