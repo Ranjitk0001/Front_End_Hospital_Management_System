@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { DocdasComponent } from './docdas/docdas.component';
 import { CreatePatientComponent } from './create-patient/create-patient.component';
 import { MedicinelistComponent } from './medicinelist/medicinelist.component';
+import { CreateMedicineComponent } from './create-medicine/create-medicine.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MedicinelistComponent } from './medicinelist/medicinelist.component';
     DocdasComponent,
     CreatePatientComponent,
     MedicinelistComponent,
+    CreateMedicineComponent,
   ],
   imports: [
     BrowserModule,
