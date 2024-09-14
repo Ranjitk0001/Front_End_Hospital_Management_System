@@ -25,4 +25,8 @@ export class PatientService {
     return this.httpClient.post<Patient>(`${this.baseUrl}`+'/insert',patient)
    }
 
+   getPatientById(id:number):Observable<Patient>{
+    return this.httpClient.get<Patient>(`${this.baseUrl}/${id}`)
+   }
+
 }

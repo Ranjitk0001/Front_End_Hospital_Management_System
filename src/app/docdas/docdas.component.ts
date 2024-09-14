@@ -23,7 +23,7 @@ export class DocdasComponent implements OnInit {
    
   }
 
-  patientUpdate(id:number){
+  update(id:number){
     this.router.navigate(['update-patient',id])
   }
 }
