@@ -9,6 +9,7 @@ import { AppoinmentComponent } from './appoinment/appoinment.component';
 import { CreateAppoinmentComponent } from './create-appoinment/create-appoinment.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { DocdasComponent } from './docdas/docdas.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HomeComponent } from './home/home.component';
     AppoinmentComponent,
     CreateAppoinmentComponent,
     HomeComponent,
+    DocdasComponent,
   ],
   imports: [
     BrowserModule,

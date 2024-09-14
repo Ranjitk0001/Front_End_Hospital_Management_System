@@ -4,13 +4,15 @@ import { AdmindashComponent } from './admindash/admindash.component';
 import { AppoinmentComponent } from './appoinment/appoinment.component';
 import { CreateAppoinmentComponent } from './create-appoinment/create-appoinment.component';
 import { HomeComponent } from './home/home.component';
+import { DocdasComponent } from './docdas/docdas.component';
 
 const routes: Routes = [
   {path:'admin',component:AdmindashComponent},
   {path:'appointmentlist',component:AppoinmentComponent},
   {path:'create-appoinment',component:CreateAppoinmentComponent},
   {path:'home',component:HomeComponent},
-  {path:'',redirectTo:'home',pathMatch:'full'}
+  {path:'',redirectTo:'home',pathMatch:'full'},
+  {path:'docdash',component:DocdasComponent},
 ];
 
 @NgModule({

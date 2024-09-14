@@ -10,8 +10,12 @@
         
         
 
-        <li class="nav-item">
-            <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/appointmentlist">Appointments</a>
+          <li class="nav-item">
+            <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/p">Add Patient</a>
+            
+          </li>
+          <li>
+            <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/n">View Medicines</a>
           </li>
 
         
@@ -27,18 +31,27 @@
     </div>
   
   </nav>
-  
+
   <div class="container">
-  <hr>
-    <h2 style="text-align: center;margin-top: 20PX;">Admin Dashboard</h2>
-    <a style="color: rgb(86, 86, 86); font-size: x-large;"><marquee behavior="scroll" direction="left">
-      Welcome to Admin Dashboard. Please find the patient list below!!. Click Appointments to view and update Appointments, Click Add Appointment to add new Appointment</marquee></a>
-  <hr>
-  <input type="text" name="search"  placeholder="Search" > 
-  <br>
-    <a style="color: rgb(86, 86, 86); font-size: xx-large;">Current Patient List in the Queue</a>
-<div class="tableFixHead">
-  <br>
+    <hr />
+    <h2 style="text-align: center; margin-top: 20px">Doctor Dashboard</h2>
+    <a style="color: rgb(86, 86, 86); font-size: x-large">
+        <marquee behavior="scroll" direction="left">
+        Welcome to Doctor Dashboard. Please find the patient list below!!. 
+      </marquee>
+      </a>
+    <hr />
+    <input type="text" name="search" placeholder="Search" />
+    <br />
+    <a style="color: rgb(86, 86, 86); font-size: xx-large"
+      >Current Patient List in the Queue</a
+    >
+</div>
+
+
+
+  <div class="tableFixHead">
+    <br>
 
 <table class="table table-striped">
     <thead>
@@ -51,7 +64,7 @@
         <th>dose</th>
         <!-- <th>fees</th> -->
         <th>urgency</th>
-        <th>Delete</th>
+        <!-- <th>Delete</th> -->
     </tr>
 </thead>
 <tbody>
@@ -65,7 +78,7 @@
     <!-- <td>{{patient.fees}}</td> -->
     <td>{{patient.urgency}}</td>
     <td>
-      <button (click)="delete(patient.id)" class="btn btn-danger">Delete</button>
+      <!-- <button (click)="delete(patient.id)" class="btn btn-danger">Delete</button> -->
     </td>
 </tr>
 
