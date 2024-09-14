@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Patient } from '../patient';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PatientService } from '../patient.service';
 
 @Component({
@@ -19,10 +19,19 @@ export class UpdatePatientComponent implements OnInit{
       })
   }
   id:number=0;
-  constructor(private route:ActivatedRoute,private patientService:PatientService){}
+  constructor(private route:ActivatedRoute,private patientService:PatientService,private router:Router){}
   patient:Patient=new Patient();
 
 
-  onSubmit(){}
+  onSubmit(){
+    this.patientService.updatePatient(this.id,this.patient).subscribe(data=>{
+      console.log(data);
+      this.goToDocDash();
+    })
 
+  }
+
+   goToDocDash(){
+    this.router.navigate(['/docdash'])
+   }
 }
