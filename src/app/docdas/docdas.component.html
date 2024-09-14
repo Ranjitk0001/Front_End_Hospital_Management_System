@@ -15,7 +15,7 @@
             
           </li>
           <li>
-            <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/view-medicine">View Medicines</a>
+            <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/medicinelist">View Medicines</a>
           </li>
 
         
@@ -60,11 +60,11 @@
         <th>Name</th>
         <th>age</th>
         <th>blood</th>
-        <th>Prescription</th>
-        <th>dose</th>
+        <!-- <th>Prescription</th>
+        <th>dose</th> -->
         <!-- <th>fees</th> -->
         <th>urgency</th>
-        <!-- <th>Delete</th> -->
+        <th>Update</th>
     </tr>
 </thead>
 <tbody>
@@ -73,12 +73,13 @@
     <td>{{patient.name}}</td>
     <td>{{patient.age}}</td>
     <td>{{patient.blood}}</td>
-    <td>{{patient.prescription}}</td>
-    <td>{{patient.dose}}</td>
+    <!-- <td>{{patient.prescription}}</td>
+    <td>{{patient.dose}}</td> -->
     <!-- <td>{{patient.fees}}</td> -->
     <td>{{patient.urgency}}</td>
     <td>
-      <!-- <button (click)="delete(patient.id)" class="btn btn-danger">Delete</button> -->
+      <button (click)="patientUpdate(patient.id)"  class="btn btn-success">Update</button>
+      
     </td>
 </tr>
 

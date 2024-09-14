@@ -8,6 +8,7 @@ import { DocdasComponent } from './docdas/docdas.component';
 import { CreatePatientComponent } from './create-patient/create-patient.component';
 import { MedicinelistComponent } from './medicinelist/medicinelist.component';
 import { CreateMedicineComponent } from './create-medicine/create-medicine.component';
+import { UpdatePatientComponent } from './update-patient/update-patient.component';
 
 const routes: Routes = [
   {path:'admin',component:AdmindashComponent},
@@ -17,9 +18,10 @@ const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'docdash',component:DocdasComponent},
   {path:'create-patient',component:CreatePatientComponent},
-  {path:'view-medicine',component:MedicinelistComponent},
+  {path:'medicinelist',component:MedicinelistComponent},
   {path:'create-medicine',component:CreateMedicineComponent},
-  
+  {path:'update-patient/:id',component:UpdatePatientComponent},
+
 ];
 
 @NgModule({
