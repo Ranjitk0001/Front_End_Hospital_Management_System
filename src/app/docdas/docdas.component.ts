@@ -33,4 +33,9 @@ export class DocdasComponent implements OnInit {
      this.getPatients();
     })
    }
+ 
+   view(id:number){
+    this.router.navigate(['view-patient',id])
+   }
+
 }
