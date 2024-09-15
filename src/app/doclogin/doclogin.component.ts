@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DocauthService } from '../docauth.service';
 
 @Component({
   selector: 'app-doclogin',
@@ -12,23 +13,21 @@ export class DocloginComponent {
 
   inValidLogin=false;
 
-  constructor(private router:Router){}
+  constructor(private router:Router,private docauthService:DocauthService){}
 
 
   checkLogin(){
-       if(this.username=="Ranjit"&&this.password=="Pass@123")
-        {
-          sessionStorage.setItem('username',this.username);
-          
+       if(this.docauthService.authenticate(this.username,this.password))
+        {         
           alert("Doctor login successfully");
           this.router.navigate(['docdash']);
-          return true;
+          this.inValidLogin=false;
         }
        else
        {
         alert("Invalid user and password");
-        this.router.navigate(['home'])
-        return false;
+        this.inValidLogin=false;
+        this.router.navigate(['home']);
         
        }
   }
