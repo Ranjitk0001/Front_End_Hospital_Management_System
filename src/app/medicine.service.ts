@@ -18,4 +18,13 @@ export class MedicineService {
    createMedicine(medicine:Medicine):Observable<Medicine>{
     return this.httpClient.post<Medicine>(`${this.baseUrl}`+'/insert',medicine)
    }
+
+   getMedicineById(id:number):Observable<Medicine>{
+    return this.httpClient.get<Medicine>(`${this.baseUrl}/${id}`)
+   }
+
+   updateMedicine(id:number,medicine:Medicine):Observable<Object>{
+    return this.httpClient.put<Medicine>(`${this.baseUrl}/${id}`,medicine)
+   }
+   
 }

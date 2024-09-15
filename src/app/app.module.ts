@@ -15,6 +15,7 @@ import { MedicinelistComponent } from './medicinelist/medicinelist.component';
 import { CreateMedicineComponent } from './create-medicine/create-medicine.component';
 import { UpdatePatientComponent } from './update-patient/update-patient.component';
 import { ViewPatientComponent } from './view-patient/view-patient.component';
+import { UpdateMedicineComponent } from './update-medicine/update-medicine.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ViewPatientComponent } from './view-patient/view-patient.component';
     CreateMedicineComponent,
     UpdatePatientComponent,
     ViewPatientComponent,
+    UpdateMedicineComponent,
   ],
   imports: [
     BrowserModule,

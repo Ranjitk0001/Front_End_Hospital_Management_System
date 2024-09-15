@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Medicine } from '../medicine';
 import { MedicineService } from '../medicine.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-medicinelist',
@@ -10,7 +11,7 @@ import { MedicineService } from '../medicine.service';
 export class MedicinelistComponent {
 
   medicines:Medicine[]=[];
-  constructor(private medicineService:MedicineService){}
+  constructor(private medicineService:MedicineService,private router:Router){}
   ngOnInit(): void {
       this.getMedicine();
   }
@@ -19,5 +20,10 @@ export class MedicinelistComponent {
     this.medicineService.getMedicine().subscribe(data=>{
       this.medicines=data;
     })
+  }
+
+  update(id:number){
+      this.router.navigate(['update-medicine',id])
+    
   }
 }
