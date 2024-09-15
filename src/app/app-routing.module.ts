@@ -17,17 +17,17 @@ import { DoctorauthguardService } from './doctorauthguard.service';
 import { AdminauthguardService } from './adminauthguard.service';
 
 const routes: Routes = [
-  {path:'admin',component:AdmindashComponent,canActivate:[AdminauthguardService]},
-  {path:'appointmentlist',component:AppoinmentComponent},
-  {path:'create-appoinment',component:CreateAppoinmentComponent},
+  {path:'admin',component:AdmindashComponent, canActivate:[AdminauthguardService]},
+  {path:'appointmentlist',component:AppoinmentComponent, canActivate:[AdminauthguardService]},
+  {path:'create-appoinment',component:CreateAppoinmentComponent, canActivate:[AdminauthguardService]},
   {path:'home',component:HomeComponent},
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'docdash',component:DocdasComponent, canActivate:[DoctorauthguardService]},
   {path:'create-patient',component:CreatePatientComponent},
   {path:'medicinelist',component:MedicinelistComponent,canActivate:[DoctorauthguardService]},
   {path:'create-medicine',component:CreateMedicineComponent,canActivate:[DoctorauthguardService]},
-  {path:'update-patient/:id',component:UpdatePatientComponent},
-  {path:'view-patient/:id',component:ViewPatientComponent},
+  {path:'update-patient/:id',component:UpdatePatientComponent,canActivate:[DoctorauthguardService]},
+  {path:'view-patient/:id',component:ViewPatientComponent,canActivate:[DoctorauthguardService]},
   {path:'update-medicine/:id',component:UpdateMedicineComponent,canActivate:[DoctorauthguardService]},
   {path:'doclogin',component:DocloginComponent},
   {path:'adminlogin',component:AdminloginComponent},
