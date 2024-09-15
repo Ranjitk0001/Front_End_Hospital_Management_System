@@ -27,4 +27,7 @@ export class MedicineService {
     return this.httpClient.put<Medicine>(`${this.baseUrl}/${id}`,medicine)
    }
    
+   deleteMedicine(id:number):Observable<Object>{
+    return this.httpClient.delete(`${this.baseUrl}/${id}`)
+   }
 }
