@@ -19,7 +19,7 @@ export class AdminloginComponent {
   checkLogin(){
        if(this.adminauthService.authenticate(this.username,this.password))
         {         
-          alert("Doctor login successfully");
+          alert("Admin login successfully");
           this.router.navigate(['admin']);
           this.inValidLogin=false;
         }

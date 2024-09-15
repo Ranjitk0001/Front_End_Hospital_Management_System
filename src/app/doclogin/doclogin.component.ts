@@ -27,7 +27,7 @@ export class DocloginComponent {
        {
         alert("Invalid user and password");
         this.inValidLogin=false;
-        this.router.navigate(['home']);
+        this.router.navigate(['home'])
         
        }
   }

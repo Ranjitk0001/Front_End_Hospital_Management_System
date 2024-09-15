@@ -14,9 +14,10 @@ import { UpdateMedicineComponent } from './update-medicine/update-medicine.compo
 import { DocloginComponent } from './doclogin/doclogin.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { DoctorauthguardService } from './doctorauthguard.service';
+import { AdminauthguardService } from './adminauthguard.service';
 
 const routes: Routes = [
-  {path:'admin',component:AdmindashComponent},
+  {path:'admin',component:AdmindashComponent,canActivate:[AdminauthguardService]},
   {path:'appointmentlist',component:AppoinmentComponent},
   {path:'create-appoinment',component:CreateAppoinmentComponent},
   {path:'home',component:HomeComponent},

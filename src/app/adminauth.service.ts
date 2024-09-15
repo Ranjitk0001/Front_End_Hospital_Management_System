@@ -18,4 +18,16 @@ export class AdminauthService {
       return false;
     }
   }
+
+  isUserLoggedIn(){
+    console.log("Admin loggin successfull");
+    let user=sessionStorage.getItem('username');
+    console.log(user);
+    return !(user==null)
+  }
+  
+  logout(){
+    console.log("Admin Logout successfull");
+    sessionStorage.removeItem('username')
+  }
 }
