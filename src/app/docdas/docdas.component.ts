@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Patient } from '../patient';
 import { PatientService } from '../patient.service';
 import { Router } from '@angular/router';
+import { DoctorauthguardService } from '../doctorauthguard.service';
+import { DocauthService } from '../docauth.service';
 
 @Component({
   selector: 'app-docdas',
@@ -10,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class DocdasComponent implements OnInit {
   patients:Patient[]=[];
-  constructor(private patientService:PatientService,private router:Router){}
+  constructor(private patientService:PatientService,private router:Router,private docauthService:DocauthService){}
 
   ngOnInit():void{
     this.getPatients();
@@ -36,6 +38,11 @@ export class DocdasComponent implements OnInit {
  
    view(id:number){
     this.router.navigate(['view-patient',id])
+   }
+
+   logout(){
+    this.docauthService.logout();
+    this.router.navigate(['home']);
    }
 
 }

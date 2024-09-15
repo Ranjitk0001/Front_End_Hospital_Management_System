@@ -19,4 +19,17 @@ export class DocauthService {
       return false;
     }
   }
+
+isUserLoggedIn(){
+  console.log("Doctor loggin successfull");
+  let user=sessionStorage.getItem('username');
+  console.log(user);
+  return !(user==null)
+}
+
+logout(){
+  console.log("Doctor Logout successfull");
+  sessionStorage.removeItem('username')
+}
+
 }
